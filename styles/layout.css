@@ -1,0 +1,217 @@
+:root {
+    --color-dark: #0C1618;
+    --color-primary: #004643;
+    --color-background: #FAF4D3;
+    --color-secondary: #D1AC00;
+    --color-accent: #F6BE9A;
+    --colo-accent2: #e65100;
+    --font-heading: 'Cambo', serif;
+    --font-body: 'Chivo', sans-serif;
+}
+
+.cambo-regular {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.chivo-regular {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--color-background);
+    color: var(--color-background);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.header-title img {
+    border-radius: 8px;
+}
+
+.header-title h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+
+.navigation {
+    background-color: var(--color-primary);
+    padding: 0.75rem;
+}
+
+.navigation a {
+    color: var(--color-background);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav.navigation a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* course work card */
+.course-work {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* image card */
+.image-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* certificate card */
+.certificate-card {
+    grid-column: span 2;
+    background: var(--color-primary);
+    color: var(--color-background);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.certificate-card h2 {
+    color: var(--color-background);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--color-accent);
+}
+
+.course-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.course-buttons button {
+    padding: 1rem;
+    border: none;
+    font-weight: bold;
+    font-family: var(--font-body);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.course-buttons .cse {
+    background-color: #e0f7fa;
+    color: #006064;
+}
+
+.course-buttons .wdd {
+    background-color: #fff3e0;
+    color: var(--colo-accent2);
+}
+
+.course-buttons button:hover {
+    transform: scale(1.05);
+}
+
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
