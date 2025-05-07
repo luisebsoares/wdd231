@@ -133,10 +133,15 @@ main {
     grid-column: span 2;
     background: var(--color-primary);
     color: var(--color-background);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 2rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .certificate-card h2 {
     color: var(--color-background);
@@ -196,6 +201,25 @@ main {
     transform: scale(1.05);
 }
 
+
+.course-card {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    max-width: 150px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid var(--color-primary);
+}
+
+#course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
 
 
 footer {

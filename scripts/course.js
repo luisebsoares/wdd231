@@ -61,40 +61,53 @@ const courses = [
     }
 ];
 
-// Render courses dynamically
 function renderCourses(courseArray) {
     const courseList = document.getElementById('course-list');
     const creditTotal = document.getElementById('credit-total');
 
-    courseList.innerHTML = ''; // Clear previous
-    let totalCredits = courseArray.reduce((sum, course) => sum + course.credits, 0);
+    // Clear previous content
+    courseList.innerHTML = '';
+
+    // Update credit total
+    const totalCredits = courseArray.reduce((sum, course) => sum + course.credits, 0);
     creditTotal.textContent = `Total Credits: ${totalCredits}`;
 
+    // Optional: Add total number of courses (like the image)
+    let countDisplay = document.getElementById('course-count');
+    if (!countDisplay) {
+        countDisplay = document.createElement('p');
+        countDisplay.id = 'course-count';
+        creditTotal.before(countDisplay);
+    }
+    countDisplay.textContent = `The total number of courses listed above is ${courseArray.length}`;
+
+    // Render simplified cards
     courseArray.forEach(course => {
         const card = document.createElement('div');
         card.classList.add('course-card');
-        if (course.completed) {
-            card.classList.add('completed');
-            card.style.backgroundColor = 'var(--color-accent)';
-        } else {
-            card.style.backgroundColor = 'white';
-        }
-        card.style.border = '2px solid var(--color-primary)';
+
+        // Apply styles
         card.style.padding = '1rem';
+        card.style.textAlign = 'center';
         card.style.borderRadius = '8px';
         card.style.marginBottom = '1rem';
+        card.style.fontWeight = 'bold';
+        card.style.fontSize = '1.1rem';
+        card.style.border = '2px solid var(--color-primary)';
 
-        card.innerHTML = `
-            <h3>${course.subject} ${course.number}: ${course.title}</h3>
-            <p><strong>Credits:</strong> ${course.credits}</p>
-            <p><strong>Description:</strong> ${course.description}</p>
-            <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
-            <p><strong>Status:</strong> ${course.completed ? '✅ Completed' : '⏳ In Progress'}</p>
-        `;
+        if (course.completed) {
+            card.style.backgroundColor = 'var(--color-accent)';
+            card.textContent = `✓ ${course.subject} ${course.number}`;
+        } else {
+            card.style.backgroundColor = 'var(--color-accent2)';
+            card.style.color = 'white';
+            card.textContent = `${course.subject} ${course.number}`;
+        }
 
         courseList.appendChild(card);
     });
 }
+
 
 // Filter logic
 function filterCourses(type) {
