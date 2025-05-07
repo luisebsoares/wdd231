@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/layout.css">
     <script src="scripts/dates.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
@@ -51,19 +52,14 @@
         <section class="certificate-card">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filter-buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
+                <button id="allBtn">All Courses</button>
+                <button id="cseBtn">CSE Courses</button>
+                <button id="wddBtn">WDD Courses</button>
             </div>
-            <div class="course-buttons">
-                <button class="cse">CSE 110</button>
-                <button class="wdd">WDD 130</button>
-                <button class="cse">CSE 111</button>
-                <button class="cse">CSE 210</button>
-                <button class="wdd">WDD 131</button>
-                <button class="wdd">WDD 231</button>
-            </div>
+            <div id="course-list"></div>
+            <p id="credit-total"></p>
         </section>
+
 
     </main>
 

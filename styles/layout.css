@@ -129,7 +129,6 @@ main {
     border-radius: 5px;
 }
 
-/* certificate card */
 .certificate-card {
     grid-column: span 2;
     background: var(--color-primary);
@@ -196,6 +195,7 @@ main {
 .course-buttons button:hover {
     transform: scale(1.05);
 }
+
 
 
 footer {
