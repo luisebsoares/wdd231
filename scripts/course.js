@@ -37,7 +37,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'This course introduces the notion of classes and objects, encapsulation, inheritance, and polymorphism.',
         technology: ['C#'],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -47,7 +47,7 @@ const courses = [
         certificate: 'Web and Computer Programming',
         description: 'Students will learn to create dynamic websites using JavaScript to respond to events and update content.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
