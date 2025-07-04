@@ -15,38 +15,43 @@
     <link rel="stylesheet" href="styles/layout.css">
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/course.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
 </head>
 
 <body>
     <header class="main-header">
-        <div class="header-title">
-            <img src="images/profile.jpg" alt="Picture of Luis" loading="lazy" width="150">
-            <h1>WDD 231 - Web Frontend Development I - Luis Brasil Soares</h1>
+        <div class="header-container">
+            <img src="images/logo.svg" alt="Site Logo" class="site-logo" />
+            <span class="site-name">Luis Brasil Soares</span>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                &#9776;
+            </button>
         </div>
+        <nav class="navigation" id="primaryNav">
+            <a href="#">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
+            <a href="https://github.com/luisebsoares">GitHub</a>
+            <a href="https://www.linkedin.com/in/lbrasilsoares/">LinkedIn</a>
+        </nav>
     </header>
 
-    <nav class="navigation">
-        <a href="#">Home</a>
-        <a href="#">Chamber</a>
-        <a href="#">Final</a>
-        <a href="https://github.com/luisebsoares">GitHub</a>
-        <a href="https://www.linkedin.com/in/lbrasilsoares/">LinkedIn</a>
-    </nav>
-
     <main>
-        <section class="course-work">
-            <h2>Course Work </h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <h1>WDD 231 - Web Frontend Development I - Luis Brasil Soares</h1>
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>
+                I'm 22 years old, born and raised in Brazil. I moved around a lot growing up, but one constant has
+                always been my love for computers and technology.
+                I’m passionate about all things tech. I love traveling, playing video games, and spending quality time
+                with my wife.
+            </p>
         </section>
 
         <section class="image-card">
-            <h2>Curitiba, Brazil</h2>
-            <img src="images/curitiba.jpg" alt="Photo of Curitiba, Brazil" loading="lazy" width="400">
-            <p>View of Botanical Garden and the city of Curitiba</p>
+            <h2>My Profile</h2>
+            <img src="images/profile.jpg" alt="Profile picture of Luis" loading="lazy" width="200">
+            <p>This is me — tech enthusiast, husband, gamer, and traveler.</p>
         </section>
 
         <section class="certificate-card">

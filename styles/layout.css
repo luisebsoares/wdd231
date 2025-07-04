@@ -35,39 +35,51 @@ h2 {
     color: var(--color-primary);
 }
 
-.main-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    padding: 1rem;
+main>h1 {
+    grid-column: 1 / -1;
     text-align: center;
-
-}
-
-.header-title {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    background-color: var(--color-background);
-    color: var(--color-background);
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.header-title img {
-    border-radius: 8px;
-}
-
-.header-title h1 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
+.main-header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 1rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.site-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.site-name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-background);
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color-background);
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
 
 .navigation {
     background-color: var(--color-primary);
@@ -106,15 +118,19 @@ main {
     gap: 2rem;
 }
 
-/* course work card */
-.course-work {
+.about-me {
     background: white;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* image card */
+.about-me p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-dark);
+}
+
 .image-card {
     background: white;
     padding: 1rem;
@@ -141,7 +157,6 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .certificate-card h2 {
     color: var(--color-background);
@@ -201,7 +216,6 @@ main {
     transform: scale(1.05);
 }
 
-
 .course-card {
     font-family: var(--font-body);
     font-size: 0.95rem;
@@ -221,7 +235,6 @@ main {
     gap: 0.75rem;
 }
 
-
 footer {
     background-color: var(--color-primary);
     color: var(--color-background);
@@ -236,6 +249,78 @@ footer {
 
 @media (max-width: 768px) {
     main {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    main>h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .course-work,
+    .image-card,
+    .certificate-card {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav.navigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    nav.navigation.open {
+        display: flex;
+    }
+
+    nav.navigation a {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        background-color: var(--color-primary);
+        color: var(--color-background);
+        margin: 0.25rem 0;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .filter-buttons button {
+        width: 80%;
+        margin: 0.25rem 0;
+    }
+
+    #course-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        width: 80%;
+    }
+
+    footer {
+        font-size: 0.85rem;
     }
 }
