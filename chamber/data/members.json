@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Thrifthood",
+        "address": "160 S 100 W #1, Provo, UT",
+        "phone": "(801) 555-0001",
+        "website": "https://thrifthood.com",
+        "image": "thrifthood.webp",
+        "membershipLevel": 1,
+        "description": "Vintage clothing & streetwear from the '80s, '90s & early 2000s"
+    },
+    {
+        "name": "Timpanogos Hiking Co.",
+        "address": "252 N University Ave, Provo, UT",
+        "phone": "(385) 223-8165",
+        "website": "https://www.timpanogoshiking.com",
+        "image": "timp_hiking.webp",
+        "membershipLevel": 2,
+        "description": "Outdoor apparel & gear with a community-driven mission"
+    },
+    {
+        "name": "The Compass",
+        "address": "250 W Center St, Provo, UT",
+        "phone": "(801) 200-3981",
+        "website": "https://www.thecompassgallery.com",
+        "image": "compass.webp",
+        "membershipLevel": 3,
+        "description": "Art gallery & rare bookstore hosting cultural events"
+    },
+    {
+        "name": "Pioneer Book",
+        "address": "450 W Center St, Provo, UT",
+        "phone": "(801) 225-2665",
+        "website": "https://pioneerbook.com",
+        "image": "pioneer_book.webp",
+        "membershipLevel": 1,
+        "description": "Largest used & rare book selection in Utah County"
+    },
+    {
+        "name": "Foxglove Flowers",
+        "address": "466 W Center St, Provo, UT",
+        "phone": "(801) 375-8096",
+        "website": "https://foxgloveflowers.com",
+        "image": "foxglove_flowers.webp",
+        "membershipLevel": 2,
+        "description": "High-end arrangements & distinctive home decor"
+    },
+    {
+        "name": "The Collective Underground",
+        "address": "26 W Center St, Provo, UT",
+        "phone": "(801) 669-2682",
+        "website": "https://collectiveunderground.com",
+        "image": "collective_underground.webp",
+        "membershipLevel": 3,
+        "description": "Indoor farmers’ market, art gallery & sustainable boutique"
+    },
+    {
+        "name": "Explore Utah Valley",
+        "address": "220 W Center St #100, Provo, UT 84601",
+        "phone": "(801) 851-2100",
+        "website": "https://www.utahvalley.com",
+        "image": "exploreutahvalley.webp",
+        "membershipLevel": 1,
+        "description": "Specialty coffee and relaxed coworking space"
+    }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Web Frontend Development I - Luis Brasil Soares</title>
+    <meta name="description" content="Directory page for Chamber Project">
+    <meta name="author" content="Luis Brasil Soares">
+    <meta property="og:title" content="WDD 231 - Web Frontend Development I - Luis Brasil Soares">
+    <meta property="og:description"
+        content="Connect with Utah County’s leading businesses and community organizations.">
+    <meta property="og:image" content="https://luisebsoares.github.io/wdd231/images/profile.jpg">
+    <meta property="og:url" content="https://luisebsoares.github.io/wdd231/">
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+</head>
+
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Utah County Chamber Logo" class="logo" />
+            <span class="site-title">Utah County Chamber of Commerce</span>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="view-toggle">
+            <button id="gridBtn" class="active">Grid View</button>
+            <button id="listBtn">List View</button>
+        </div>
+
+        <section id="members" class="grid-view">
+            <!-- cards will be inserted here frommembers.json -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luis Brasil Soares - Cedar Hills, UT</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #F9FAFB;
+    color: #1F2937;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003366;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.site-title {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-menu a.active {
+    text-decoration: underline;
+}
+
+.view-toggle {
+    margin: 20px;
+    text-align: right;
+}
+
+.view-toggle button {
+    background: #4B5563;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.view-toggle button.active {
+    background: #FBBF24;
+    color: #1F2937;
+}
+
+.list-view .member-card img {
+    display: none;
+}
+
+#members {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-card[data-membership="3"] {
+    border-left: 6px solid gold;
+}
+
+.member-card[data-membership="2"] {
+    border-left: 6px solid silver;
+}
+
+.member-card[data-membership="1"] {
+    border-left: 6px solid #01aeff;
+}
+
+#members.grid-view {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#members.list-view {
+    display: block;
+    padding: 20px;
+}
+
+.list-view .member-card {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.member-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    max-height: 280px;
+}
+
+.member-card img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    background: #f1f1f1;
+}
+
+.member-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.25rem;
+}
+
+.member-card p,
+.member-card a {
+    font-size: 0.95rem;
+    color: #1F2937;
+}
+
+.member-card a {
+    color: #003366;
+    text-decoration: none;
+}
+
+footer {
+    background: #4B5563;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    #members.grid-view {
+        grid-template-columns: 1fr !important;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .view-toggle {
+        text-align: left;
+    }
+
+    .member-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        font-size: 0.85rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .member-card img {
+        max-height: 90px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .member-card h3 {
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 5px 0;
+    }
+
+    .member-card p,
+    .member-card a {
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin: 2px 0;
+    }
+}
