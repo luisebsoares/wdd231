@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utah County Chamber of Commerce</title>
-    <meta name="description" content="Directory page for Chamber Project">
+    <meta name="description" content="Home page for Chamber Project">
     <meta name="author" content="Luis Brasil Soares">
     <meta property="og:title" content="WDD 231 - Web Frontend Development I - Luis Brasil Soares">
     <meta property="og:description"
@@ -14,7 +14,8 @@
     <meta property="og:url" content="https://luisebsoares.github.io/wdd231/chamber/directory.html">
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/directory.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/directory.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
@@ -23,6 +24,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap"
         rel="stylesheet">
+    <script src="scripts/weather.js" defer></script>
 </head>
 
 
@@ -33,10 +35,10 @@
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html" class="active">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="https://luisebsoares.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                    <li><a href="https://luisebsoares.github.io/wdd231/chamber/join.html">Join</a></li>
+                    <li><a href="https://luisebsoares.github.io/wdd231/chamber/discover.html">Discover</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,13 +46,39 @@
 
 
     <main>
-        <h1>Utah County Chamber of Commerce</h1>
-        <div class="view-toggle">
-            <button id="gridBtn" class="active">Grid View</button>
-            <button id="listBtn">List View</button>
-        </div>
+        <section class="hero">
+            <img src="images/utah_hero.jpeg" alt="Scenic Utah Landscape" />
+            <div class="hero-text">
+                <h1>Welcome to the Utah County Chamber of Commerce</h1>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+        </section>
 
-        <section id="members" class="grid-view">
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>Business Networking Night:</strong> July 25th, 6 PM @ City Hall</li>
+                <li><strong>Small Biz Workshop:</strong> August 3rd, 10 AM @ Chamber Center</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <div class="weather-box">
+                <p><span id="current-temp"></span></p>
+                <figure>
+                    <img id="weather-icon" src="#" alt="weather icon">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div class="spotlight-container" id="spotlightContainer">
+            </div>
         </section>
     </main>
 
