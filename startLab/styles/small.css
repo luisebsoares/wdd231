@@ -1,2 +1,19 @@
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
+#openButton {
+    background-color: lightblue;
+}
+
+#dialogBox {
+    background-color: lavender;
+}
+
+#closeButton {
+    background-color: rgb(250, 91, 91);
+}
+
+::backdrop {
+    background-color: rgba(100, 100, 100, 0.5);
+}
