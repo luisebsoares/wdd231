@@ -104,7 +104,9 @@ function renderCourses(courseArray) {
             card.textContent = `${course.subject} ${course.number}`;
         }
 
+        card.addEventListener('click', () => showCourseModal(course));
         courseList.appendChild(card);
+
     });
 }
 
@@ -126,3 +128,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderCourses(courses); // Initial load
 });
+
+function showCourseModal(course) {
+    const dialog = document.getElementById('course-details');
+
+    // Clear previous content
+    dialog.innerHTML = '';
+
+    // Create Close Button
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Close';
+    closeBtn.addEventListener('click', () => dialog.close());
+    dialog.appendChild(closeBtn);
+
+    // Course content
+    const content = `
+        <h2>${course.subject} ${course.number}: ${course.title}</h2>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Description:</strong> ${course.description}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p><strong>Technology Stack:</strong> ${course.technology.join(', ')}</p>
+    `;
+
+    dialog.insertAdjacentHTML('beforeend', content);
+
+    dialog.showModal();
+
+    dialog.addEventListener('click', function outsideClick(e) {
+        const rect = dialog.getBoundingClientRect();
+        if (
+            e.clientX < rect.left ||
+            e.clientX > rect.right ||
+            e.clientY < rect.top ||
+            e.clientY > rect.bottom
+        ) {
+            dialog.close();
+        }
+    }, { once: true });
+}
