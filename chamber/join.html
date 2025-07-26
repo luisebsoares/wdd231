@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Chamber</title>
+    <meta name="description" content="Apply for membership in the Utah County Chamber" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/join.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Utah County Chamber Logo" class="logo" />
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Join the Utah County Chamber of Commerce</h1>
+        <section class="form-card">
+            <form method="get" action="thankyou.html">
+                <label for="firstName">
+                    First Name
+                    <input type="text" id="firstName" name="firstName" title="Applicant’s first name"
+                        autocomplete="given-name" required />
+                </label>
+
+                <label for="lastName">
+                    Last Name
+                    <input type="text" id="lastName" name="lastName" title="Applicant’s last name"
+                        autocomplete="family-name" required />
+                </label>
+
+                <label for="orgTitle">
+                    Your Title
+                    <input type="text" id="orgTitle" name="orgTitle" title="Your organizational title"
+                        autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"
+                        placeholder="e.g. Marketing Manager" />
+                </label>
+
+                <label for="email">
+                    Email Address
+                    <input type="email" id="email" name="email" title="Your email address" autocomplete="email"
+                        placeholder="you@example.com" required />
+                </label>
+
+                <label for="phone">
+                    Mobile Phone
+                    <input type="tel" id="phone" name="phone" title="Your mobile phone number" autocomplete="tel"
+                        placeholder="(555) 123-4567" required />
+                </label>
+
+                <label for="organization">
+                    Organization Name
+                    <input type="text" id="organization" name="organization" title="Your business or organization name"
+                        autocomplete="organization" required />
+                </label>
+
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label>
+                        <input type="radio" name="membership" value="NP" required /> NP (Non‑Profit)
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="Bronze" /> Bronze
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="Silver" /> Silver
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="Gold" /> Gold
+                    </label>
+                </fieldset>
+
+                <label for="description">
+                    Organization Description
+                    <textarea id="description" name="description" title="Brief description of your organization"
+                        rows="4" placeholder="Tell us a little about your business…"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="" />
+
+                <input type="submit" value="Apply Now" />
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <article class="membership-card" tabindex="0">
+                <h3>NP Membership</h3>
+                <ul>
+                    <li>Free directory listing</li>
+                    <li>Event promotion</li>
+                    <li>Nonprofit networking</li>
+                    <li>Discounted trainings</li>
+                </ul>
+                <a href="#" data-modal="npModal">Learn More</a>
+            </article>
+
+            <article class="membership-card" tabindex="0">
+                <h3>Bronze Membership</h3>
+                <ul>
+                    <li>Spotlight ads</li>
+                    <li>Training discounts</li>
+                    <li>Email newsletter feature</li>
+                    <li>Luncheon sponsorships</li>
+                </ul>
+                <a href="#" data-modal="bronzeModal">Learn More</a>
+            </article>
+
+            <article class="membership-card" tabindex="0">
+                <h3>Silver Membership</h3>
+                <ul>
+                    <li>Top directory placement</li>
+                    <li>Event discounts</li>
+                    <li>Social media shout‑outs</li>
+                    <li>Priority registration</li>
+                </ul>
+                <a href="#" data-modal="silverModal">Learn More</a>
+            </article>
+
+            <article class="membership-card" tabindex="0">
+                <h3>Gold Membership</h3>
+                <ul>
+                    <li>VIP networking</li>
+                    <li>Premium banner ads</li>
+                    <li>Custom sponsorships</li>
+                    <li>Business consultations</li>
+                </ul>
+                <a href="#" data-modal="goldModal">Learn More</a>
+            </article>
+        </section>
+
+
+        <dialog id="npModal">
+            <h4>NP Membership Benefits</h4>
+            <ul>
+                <li>Free basic directory listing on our website</li>
+                <li>Nonprofit event promotion via chamber channels</li>
+                <li>Access to quarterly nonprofit-only networking calls</li>
+                <li>Invitation to volunteer board meetings</li>
+                <li>Discounted rates on training workshops</li>
+                <li>Inclusion in our annual “Community Impact” report</li>
+            </ul>
+            <button data-close>Close</button>
+        </dialog>
+
+        <dialog id="bronzeModal">
+            <h4>Bronze Membership Benefits</h4>
+            <ul>
+                <li>Everything in NP Membership, plus:</li>
+                <li>Basic spotlight advertisement on home page (rotating banner)</li>
+                <li>20% discount on all chamber-hosted training sessions</li>
+                <li>Quarterly email feature in our member newsletter</li>
+                <li>Access to member-only webinars and skill-building events</li>
+                <li>Opportunity to sponsor one community luncheon per year</li>
+            </ul>
+            <button data-close>Close</button>
+        </dialog>
+
+        <dialog id="silverModal">
+            <h4>Silver Membership Benefits</h4>
+            <ul>
+                <li>All Bronze perks, plus:</li>
+                <li>Featured directory placement (top of category listings)</li>
+                <li>30% discount on advertising packages</li>
+                <li>Two complimentary tickets to chamber luncheons each quarter</li>
+                <li>Social media shout-outs (up to 4 posts per year)</li>
+                <li>Priority registration for chamber conferences and expos</li>
+                <li>Access to leadership roundtable discussions</li>
+            </ul>
+            <button data-close>Close</button>
+        </dialog>
+
+        <dialog id="goldModal">
+            <h4>Gold Membership Benefits</h4>
+            <ul>
+                <li>All Silver perks, plus:</li>
+                <li>Premium website banner ad (fixed position) for one year</li>
+                <li>VIP networking reception invitations (unlimited)</li>
+                <li>Custom sponsorship opportunities at flagship events</li>
+                <li>Dedicated chamber-led social media campaign</li>
+                <li>Complimentary exhibit space at annual business expo</li>
+                <li>Personalized business consultation with chamber advisors</li>
+            </ul>
+            <button data-close>Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luis Brasil Soares – Cedar Hills, UT</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
