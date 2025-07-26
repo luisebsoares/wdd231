@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Chamber - Utah County Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Utah County Chamber Logo" class="logo" />
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://luisebsoares.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="https://luisebsoares.github.io/wdd231/chamber/discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="join-main">
+        <h1>Join the Chamber</h1>
+        <form method="get" action="thankyou.html">
+            <label>
+                First Name:
+                <input type="text" name="firstName" title="First Name" required autocomplete="given-name" />
+            </label>
+            <label>
+                Last Name:
+                <input type="text" name="lastName" title="Last Name" required autocomplete="family-name" />
+            </label>
+            <label>
+                Title:
+                <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                    pattern="[A-Za-z\-\s]{7,}" />
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" title="Email Address" required autocomplete="email"
+                    placeholder="your@email.com" />
+            </label>
+            <label>
+                Mobile Phone:
+                <input type="tel" name="phone" title="Mobile Phone" required autocomplete="tel" />
+            </label>
+            <label>
+                Business/Organization:
+                <input type="text" name="organization" title="Organization Name" required autocomplete="organization" />
+            </label>
+            <label>
+                Membership Level:
+                <select name="membership" title="Membership Level" required>
+                    <option value="">Select One</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+            <label>
+                Business Description:
+                <textarea name="description" title="Business Description"></textarea>
+            </label>
+            <input type="hidden" name="timestamp" id="timestamp" />
+            <input type="submit" value="Submit Application" />
+        </form>
+
+        <section class="membership-info">
+            <div class="card">NP Membership <a href="#" onclick="openModal('np')">Details</a></div>
+            <div class="card">Bronze Membership <a href="#" onclick="openModal('bronze')">Details</a></div>
+            <div class="card">Silver Membership <a href="#" onclick="openModal('silver')">Details</a></div>
+            <div class="card">Gold Membership <a href="#" onclick="openModal('gold')">Details</a></div>
+        </section>
+
+        <!-- Example modal structure -->
+        <dialog id="np">
+            <p>NP Membership includes free listings and nonprofit event promotion.</p>
+            <button onclick="document.getElementById('np').close()">Close</button>
+        </dialog>
+        <dialog id="bronze">
+            <p>Bronze Membership includes training and basic spotlight ads.</p>
+            <button onclick="document.getElementById('bronze').close()">Close</button>
+        </dialog>
+        <dialog id="silver">
+            <p>Silver Membership includes event discounts and featured directory position.</p>
+            <button onclick="document.getElementById('silver').close()">Close</button>
+        </dialog>
+        <dialog id="gold">
+            <p>Gold Membership includes spotlight positions, free ads, and VIP networking events.</p>
+            <button onclick="document.getElementById('gold').close()">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luis Brasil Soares - Cedar Hills, UT</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // Load timestamp
+        document.getElementById("timestamp").value = new Date().toISOString();
+
+        // Modal open function
+        function openModal(id) {
+            document.getElementById(id).showModal();
+        }
+    </script>
+</body>
+
+</html>
