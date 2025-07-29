@@ -1,11 +1,15 @@
 const gridBtn = document.getElementById('gridBtn');
 const listBtn = document.getElementById('listBtn');
 const members = document.getElementById('members');
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.querySelector('.nav-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+    });
 });
 
 gridBtn.addEventListener('click', () => setView('grid'));
