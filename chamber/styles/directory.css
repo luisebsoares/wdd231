@@ -348,4 +348,25 @@ footer {
     .hero img {
         max-height: 300px;
     }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #003366;
+        padding: 0.5em 0;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5em 0;
+        text-align: center;
+    }
 }
