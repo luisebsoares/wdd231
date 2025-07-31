@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Provo City Center Temple",
+        "image": "images/provo-temple.webp",
+        "address": "50 S University Ave, Provo, UT 84601",
+        "description": "A stunning landmark built on the site of a historic tabernacle, offering beautiful architecture and gardens.",
+        "hours": "Gardens open 24/7; temple ordinances by appointment",
+        "phone": "(801) 343-2700",
+        "website": "https://www.churchofjesuschrist.org/temples/details/provo-city-center-temple"
+    },
+    {
+        "title": "BYU Museum of Art",
+        "image": "images/byu-museum.webp",
+        "address": "410 N University Ave, Provo, UT 84602",
+        "description": "International and local exhibitions with free admission and inspiring collections.",
+        "hours": "Mon–Thu 10 AM–6 PM; Fri 10 AM–9 PM; Sat 10 AM–6 PM; closed Sun",
+        "phone": "801-422-4636",
+        "website": "https://moa.byu.edu/"
+    },
+    {
+        "title": "Squaw Peak Trailhead",
+        "image": "images/squaw-peak.webp",
+        "address": "6201 N Highland Dr, Provo, UT 84604",
+        "description": "Popular hiking spot with panoramic views of Utah Valley and Mt. Timpanogos.",
+        "hours": "Dawn to dusk",
+        "length": "6.2 mi out-and-back",
+        "parking": "Available at trailhead",
+        "website": "https://www.provo.gov/387/Trails"
+    },
+    {
+        "title": "Provo River Parkway",
+        "image": "images/provo-river.webp",
+        "address": "200 W Center St, Provo, UT 84601",
+        "description": "Scenic 17-mile trail perfect for biking, walking, and wildlife viewing along the Provo River.",
+        "hours": "Dawn to dusk",
+        "phone": "801-851-8640",
+        "website": "https://www.utahvalley.com/listing/provo-river-parkway-trail/791/"
+    },
+    {
+        "title": "Covey Center for the Arts",
+        "image": "images/covey-center.webp",
+        "address": "425 W Center St, Provo, UT 84601",
+        "description": "Stage performances, art classes, and community events in a beautifully restored historic building.",
+        "hours": "Mon–Fri 10 AM–6 PM; box office opens 1 hr before shows",
+        "website": "https://www.provo.gov/264/Covey-Center-Information"
+    },
+    {
+        "title": "Utah Lake State Park",
+        "image": "images/utah-lake.webp",
+        "address": "4400 W Utah Lake Park Rd, Provo, UT 84601",
+        "description": "Boating, fishing, and picnicking on Utah’s largest freshwater lake, with stunning mountain backdrops.",
+        "hours": "6 AM–8 PM (last boat 7:30 PM)",
+        "phone": "801-375-0731",
+        "fees": "Entrance: $20/vehicle; reservation: $100/day",
+        "website": "https://stateparks.utah.gov/parks/utah-lake/"
+    },
+    {
+        "title": "Provo Farmers Market",
+        "image": "images/provo-market.webp",
+        "address": "280 W 100 S, Provo, UT 84601",
+        "description": "Local produce, crafts, and live music in Historic Downtown Provo.",
+        "hours": "Sat 9 AM–2 PM, Jun–Oct",
+        "website": "https://www.provofarmersmarket.com/"
+    },
+    {
+        "title": "Bridal Veil Falls",
+        "image": "images/bridal-veil.webp",
+        "address": "Bridal Veil Falls Scenic Viewing Area, Provo Canyon, UT",
+        "description": "Iconic 607-ft waterfall with paved, accessible trail and picnic tables.",
+        "hours": "Dawn to dusk",
+        "phone": "801-851-8640",
+        "website": "https://www.utahvalley.com/listing/bridal-veil-falls/41/"
+    }
+]

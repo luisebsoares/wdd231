@@ -1,0 +1,208 @@
+/* Base: single-column layout */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+    gap: 20px;
+    padding: 20px;
+}
+
+.discover-grid .card:nth-child(1) {
+    grid-area: a;
+}
+
+.discover-grid .card:nth-child(2) {
+    grid-area: b;
+}
+
+.discover-grid .card:nth-child(3) {
+    grid-area: c;
+}
+
+.discover-grid .card:nth-child(4) {
+    grid-area: d;
+}
+
+.discover-grid .card:nth-child(5) {
+    grid-area: e;
+}
+
+.discover-grid .card:nth-child(6) {
+    grid-area: f;
+}
+
+.discover-grid .card:nth-child(7) {
+    grid-area: g;
+}
+
+.discover-grid .card:nth-child(8) {
+    grid-area: h;
+}
+
+/* Card styling */
+.discover-grid .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-grid .card figure {
+    margin: 0 0 10px;
+}
+
+.discover-grid .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.discover-grid .card h2 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    color: #003366;
+}
+
+.discover-grid .card address {
+    margin: 0 0 10px;
+    font-style: normal;
+    color: #555;
+}
+
+.discover-grid .card p {
+    flex: 1;
+    margin: 0 0 12px;
+    color: #333;
+}
+
+.discover-grid .card button {
+    align-self: flex-start;
+    padding: 8px 14px;
+    background: #FBBF24;
+    color: #1F2937;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.visit-message {
+    background: #E0F2FE;
+    border-left: 4px solid #0284C7;
+    padding: 12px 16px;
+    margin: 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+@media (min-width: 641px) {
+    .discover-grid .card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-grid .card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+.discover-dialog {
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 90%;
+    width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.discover-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.discover-dialog h2 {
+    margin-top: 0;
+}
+
+.discover-dialog figure {
+    margin: 15px 0;
+}
+
+.discover-dialog img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.discover-dialog address {
+    display: block;
+    font-style: normal;
+    margin: 10px 0;
+}
+
+.discover-dialog p {
+    margin-bottom: 20px;
+}
+
+.discover-dialog .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.discover-dialog {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: none;
+}
+
+.discover-dialog[open] {
+    animation: fadeInZoom 0.3s ease-out forwards;
+}
+
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e f"
+            "g h";
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "a b c d"
+            "e f g h";
+    }
+}
