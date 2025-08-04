@@ -1,0 +1,296 @@
+[
+  {
+    "appid": 1245620,
+    "name": "Elden Ring",
+    "genre": "RPG",
+    "release_date": "2022-02-25"
+  },
+  {
+    "appid": 990080,
+    "name": "Hogwarts Legacy",
+    "genre": "RPG",
+    "release_date": "2023-02-10"
+  },
+  {
+    "appid": 1091500,
+    "name": "Cyberpunk 2077",
+    "genre": "RPG",
+    "release_date": "2020-12-10"
+  },
+  {
+    "appid": 1674410,
+    "name": "God of War",
+    "genre": "Action",
+    "release_date": "2018-04-20"
+  },
+  {
+    "appid": 1172470,
+    "name": "Apex Legends",
+    "genre": "FPS",
+    "release_date": "2019-02-04"
+  },
+  {
+    "appid": 578080,
+    "name": "PUBG: Battlegrounds",
+    "genre": "FPS",
+    "release_date": "2017-12-20"
+  },
+  {
+    "appid": 730,
+    "name": "Counter-Strike: Global Offensive",
+    "genre": "FPS",
+    "release_date": "2012-08-21"
+  },
+  {
+    "appid": 230410,
+    "name": "Warframe",
+    "genre": "FPS",
+    "release_date": "2013-03-25"
+  },
+  {
+    "appid": 440,
+    "name": "Team Fortress 2",
+    "genre": "FPS",
+    "release_date": "2007-10-10"
+  },
+  {
+    "appid": 252490,
+    "name": "Rust",
+    "genre": "Survival",
+    "release_date": "2018-02-08"
+  },
+  {
+    "appid": 570,
+    "name": "Dota 2",
+    "genre": "MOBA",
+    "release_date": "2013-07-09"
+  },
+  {
+    "appid": 10,
+    "name": "Counter-Strike",
+    "genre": "FPS",
+    "release_date": "2000-11-01"
+  },
+  {
+    "appid": 945360,
+    "name": "Among Us",
+    "genre": "Party",
+    "release_date": "2018-06-15"
+  },
+  {
+    "appid": 413150,
+    "name": "Stardew Valley",
+    "genre": "Simulation",
+    "release_date": "2016-02-26"
+  },
+  {
+    "appid": 105600,
+    "name": "Terraria",
+    "genre": "Adventure",
+    "release_date": "2011-05-16"
+  },
+  {
+    "appid": 1145360,
+    "name": "Hades",
+    "genre": "Rogue-like",
+    "release_date": "2020-09-17"
+  },
+  {
+    "appid": 782330,
+    "name": "DOOM Eternal",
+    "genre": "FPS",
+    "release_date": "2020-03-20"
+  },
+  {
+    "appid": 292030,
+    "name": "The Witcher 3: Wild Hunt",
+    "genre": "RPG",
+    "release_date": "2015-05-19"
+  },
+  {
+    "appid": 359550,
+    "name": "Tom Clancy's Rainbow Six Siege",
+    "genre": "FPS",
+    "release_date": "2015-12-01"
+  },
+  {
+    "appid": 271590,
+    "name": "Grand Theft Auto V",
+    "genre": "Action",
+    "release_date": "2015-04-14"
+  },
+  {
+    "appid": 814380,
+    "name": "Sekiro: Shadows Die Twice",
+    "genre": "Action",
+    "release_date": "2019-03-22"
+  },
+  {
+    "appid": 1151640,
+    "name": "Horizon Zero Dawn",
+    "genre": "Action",
+    "release_date": "2020-08-07"
+  },
+  {
+    "appid": 1551360,
+    "name": "Forza Horizon 5",
+    "genre": "Racing",
+    "release_date": "2021-11-05"
+  },
+  {
+    "appid": 1196590,
+    "name": "Resident Evil Village",
+    "genre": "Horror",
+    "release_date": "2021-05-07"
+  },
+  {
+    "appid": 1086940,
+    "name": "Baldur's Gate 3",
+    "genre": "RPG",
+    "release_date": "2023-08-03"
+  },
+  {
+    "appid": 377160,
+    "name": "Fallout 4",
+    "genre": "RPG",
+    "release_date": "2015-11-10"
+  },
+  {
+    "appid": 489830,
+    "name": "The Elder Scrolls V: Skyrim Special Edition",
+    "genre": "RPG",
+    "release_date": "2016-10-28"
+  },
+  {
+    "appid": 1174180,
+    "name": "Red Dead Redemption 2",
+    "genre": "Action",
+    "release_date": "2019-11-05"
+  },
+  {
+    "appid": 946576,
+    "name": "Tom Clancy's Rainbow Six Extraction",
+    "genre": "FPS",
+    "release_date": "2022-01-20"
+  },
+  {
+    "appid": 750920,
+    "name": "Shadow of the Tomb Raider",
+    "genre": "Action",
+    "release_date": "2018-09-14"
+  },
+  {
+    "appid": 1054530,
+    "name": "Assassin's Creed Valhalla",
+    "genre": "Action",
+    "release_date": "2020-11-10"
+  },
+  {
+    "appid": 1250410,
+    "name": "Microsoft Flight Simulator",
+    "genre": "Simulation",
+    "release_date": "2020-08-18"
+  },
+  {
+    "appid": 1782940,
+    "name": "Deathloop",
+    "genre": "FPS",
+    "release_date": "2021-09-14"
+  },
+  {
+    "appid": 1817070,
+    "name": "Marvel's Spider-Man Remastered",
+    "genre": "Action",
+    "release_date": "2022-08-12"
+  },
+  {
+    "appid": 1281930,
+    "name": "It Takes Two",
+    "genre": "Adventure",
+    "release_date": "2021-03-26"
+  },
+  {
+    "appid": 739630,
+    "name": "Phasmophobia",
+    "genre": "Horror",
+    "release_date": "2020-09-18"
+  },
+  {
+    "appid": 892970,
+    "name": "Valheim",
+    "genre": "Survival",
+    "release_date": "2021-02-02"
+  },
+  {
+    "appid": 252950,
+    "name": "Rocket League",
+    "genre": "Sports",
+    "release_date": "2015-07-07"
+  },
+  {
+    "appid": 1238840,
+    "name": "Destiny 2",
+    "genre": "FPS",
+    "release_date": "2017-09-06"
+  },
+  {
+    "appid": 39210,
+    "name": "Age of Empires II: Definitive Edition",
+    "genre": "Strategy",
+    "release_date": "2019-11-14"
+  },
+  {
+    "appid": 945880,
+    "name": "Monster Hunter: World",
+    "genre": "Action",
+    "release_date": "2018-01-26"
+  },
+  {
+    "appid": 359060,
+    "name": "Cities: Skylines",
+    "genre": "Simulation",
+    "release_date": "2015-03-10"
+  },
+  {
+    "appid": 292030,
+    "name": "Civilization VI",
+    "genre": "Strategy",
+    "release_date": "2016-10-21"
+  },
+  {
+    "appid": 1054470,
+    "name": "Among Us VR",
+    "genre": "Party",
+    "release_date": "2022-11-10"
+  },
+  {
+    "appid": 676600,
+    "name": "Cyber Shadow",
+    "genre": "Platformer",
+    "release_date": "2021-01-26"
+  },
+  {
+    "appid": 578080,
+    "name": "Slay the Spire",
+    "genre": "Card Game",
+    "release_date": "2019-01-23"
+  },
+  {
+    "appid": 387990,
+    "name": "The Forest",
+    "genre": "Survival",
+    "release_date": "2018-04-30"
+  },
+  {
+    "appid": 1058000,
+    "name": "It Takes Two",
+    "genre": "Adventure",
+    "release_date": "2021-03-26"
+  },
+  {
+    "appid": 391540,
+    "name": "Watch Dogs 2",
+    "genre": "Action",
+    "release_date": "2016-11-29"
+  }
+]

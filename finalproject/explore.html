@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameWithUs – Explore</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/final.js" defer></script>
+    <script src="scripts/explore.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>GameWithUs</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="explore">
+            <h2>Explore Games</h2>
+            <div class="controls">
+                <select id="genreFilter">
+                    <option value="">All Genres</option>
+                </select>
+                <div class="view-toggle">
+                    <button id="gridView" class="active">Grid</button>
+                    <button id="listView">List</button>
+                </div>
+            </div>
+            <div id="gameList" class="game-cards grid">
+            </div>
+        </section>
+
+        <dialog id="gameModal">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+            <button class="close-btn" id="closeModal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Luis Brasil Soares – Cedar Hills, UT</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
