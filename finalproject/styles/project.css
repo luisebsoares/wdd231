@@ -32,7 +32,6 @@ footer {
     max-width: 800px;
 }
 
-/* Navigation Bar */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -76,10 +75,6 @@ header nav h1 {
 
 header {
     text-align: center;
-}
-
-h1 {
-    /* Legacy header style removed; nav h1 handles it */
 }
 
 section {
@@ -144,7 +139,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Home page specific */
 .hero {
     background-color: var(--studio);
     color: var(--soft-peach);
@@ -208,7 +202,6 @@ footer {
     text-align: center;
 }
 
-/* Explore page: controls & view toggles */
 .controls {
     display: flex;
     justify-content: space-between;
@@ -238,7 +231,6 @@ footer {
     background: var(--martinique);
 }
 
-/* Grid vs List layout */
 #gameList.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -251,7 +243,14 @@ footer {
     gap: 1rem;
 }
 
-/* Modal styling */
+dialog#gameModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
 dialog#gameModal {
     border: 5px solid var(--studio);
     border-radius: 6px;
@@ -273,6 +272,17 @@ dialog::backdrop {
     border-radius: 4px;
     margin-top: 0.5rem;
 }
+
+.game-cards .game-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-cards .game-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 @media (max-width: 600px) {
     body {
