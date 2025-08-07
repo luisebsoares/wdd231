@@ -391,158 +391,47 @@ button[type="submit"]:focus {
     }
 }
 
-/* --- Community form styling --- */
-
-form#gameSubmissionForm {
-    background: var(--spun-pearl);
-    padding: 1.5rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(95, 67, 178, 0.2);
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 1rem auto 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-form#gameSubmissionForm label {
-    font-weight: 700;
-    color: var(--martinique);
-    margin-bottom: 0.25rem;
-    display: block;
-}
-
-form#gameSubmissionForm input[type="text"],
-form#gameSubmissionForm input[type="email"],
-form#gameSubmissionForm input[type="url"],
-form#gameSubmissionForm input[type="date"],
-form#gameSubmissionForm select,
-form#gameSubmissionForm textarea {
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-    border: 2px solid var(--martinique);
-    border-radius: 6px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    resize: vertical;
-    min-height: 40px;
-}
-
-form#gameSubmissionForm textarea {
-    min-height: 100px;
-}
-
-form#gameSubmissionForm input[type="text"]:focus,
-form#gameSubmissionForm input[type="email"]:focus,
-form#gameSubmissionForm input[type="url"]:focus,
-form#gameSubmissionForm input[type="date"]:focus,
-form#gameSubmissionForm select:focus,
-form#gameSubmissionForm textarea:focus {
-    outline: none;
-    border-color: var(--studio);
-    box-shadow: 0 0 5px var(--studio);
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    color: var(--martinique);
-}
-
-.checkbox-container a {
-    color: var(--studio);
-    text-decoration: underline;
-}
-
-.checkbox-container input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-}
-
-button[type="submit"] {
-    background-color: var(--studio);
-    color: var(--soft-peach);
-    border: none;
-    padding: 0.75rem 1.25rem;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: flex-start;
-    margin-top: 1rem;
-    box-shadow: 0 4px 10px rgba(95, 67, 178, 0.4);
-}
-
-button[type="submit"]:hover,
-button[type="submit"]:focus {
-    background-color: var(--martinique);
-    box-shadow: 0 6px 15px rgba(58, 49, 83, 0.7);
-    outline: none;
-}
-
-@media (max-width: 600px) {
-    form#gameSubmissionForm {
-        padding: 1rem;
-        margin: 1rem;
-    }
-
-    button[type="submit"] {
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
-    }
-}
-
-/* --- Submission confirmation page styling --- */
-
-main {
-    background: var(--spun-pearl);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 700px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 15px rgba(95, 67, 178, 0.2);
-    font-family: 'Roboto', sans-serif;
-}
-
-main h1 {
-    font-family: 'Press Start 2P', cursive;
-    color: var(--studio);
-    margin-bottom: 1rem;
-}
-
-.submitted-data dt {
-    font-weight: 700;
-    color: var(--martinique);
-    margin-top: 1rem;
-}
-
-.submitted-data dd {
-    margin-left: 0;
-    margin-bottom: 0.5rem;
-    white-space: pre-wrap;
-}
-
-a.back-link {
-    display: inline-block;
-    margin-top: 2rem;
+/* Hamburger button style */
+.menu-toggle {
+    display: none;
     background: var(--studio);
+    border: none;
     color: var(--soft-peach);
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
     transition: background-color 0.3s ease;
 }
 
-a.back-link:hover {
+.menu-toggle:hover,
+.menu-toggle:focus {
     background: var(--martinique);
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: var(--spun-pearl);
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        border-radius: 6px;
+        padding: 1rem;
+        box-shadow: 0 6px 15px rgba(95, 67, 178, 0.3);
+        z-index: 1000;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
 }
 
 
