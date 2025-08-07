@@ -2,15 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let allGames = [];
     let currentView = 'grid';
 
-    // Load games.json from project root
-    fetch('games.json')
-        .then(res => res.json())
-        .then(games => {
+    async function loadGames() {
+        try {
+            const res = await fetch('games.json');
+            if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+            const games = await res.json();
+
             allGames = games;
             populateFilter(games);
             renderGames(games);
-        })
-        .catch(err => console.error('Error loading games:', err));
+        } catch (error) {
+            console.error('Error loading games:', error);
+        }
+    }
 
     function populateFilter(games) {
         const select = document.getElementById('genreFilter');
@@ -49,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Toggle grid/list views
     document.getElementById('gridView').addEventListener('click', () => {
         currentView = 'grid';
         toggleActive('gridView');
@@ -76,14 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function openModal(game) {
         document.getElementById('modalTitle').textContent = game.name;
         document.getElementById('modalDesc').innerHTML = `
-  ${game.description || 'No description available.'}<br>
-  <strong>Released:</strong> ${game.release_date}
-`;
+      ${game.description || 'No description available.'}<br>
+      <strong>Released:</strong> ${game.release_date}
+    `;
         document.getElementById('gameModal').showModal();
     }
-
 
     document.getElementById('closeModal').addEventListener('click', () => {
         document.getElementById('gameModal').close();
     });
+
+    loadGames();
 });
