@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
-
 :root {
     --black: #010101;
     --studio: #5f43b2;
@@ -391,7 +389,6 @@ button[type="submit"]:focus {
     }
 }
 
-/* Hamburger button style */
 .menu-toggle {
     display: none;
     background: var(--studio);
@@ -420,13 +417,13 @@ button[type="submit"]:focus {
         flex-direction: column;
         gap: 1rem;
         background: var(--spun-pearl);
-        position: absolute;
-        top: 60px;
-        right: 1rem;
         border-radius: 6px;
         padding: 1rem;
-        box-shadow: 0 6px 15px rgba(95, 67, 178, 0.3);
-        z-index: 1000;
+        margin-top: 0.5rem;
+        box-shadow: none;
+        /* remove shadow for inline expansion */
+        position: static;
+        /* remove absolute positioning */
     }
 
     .nav-menu.show {
