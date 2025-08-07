@@ -2,18 +2,16 @@ function decodeParam(param) {
     return decodeURIComponent(param.replace(/\+/g, ' '));
 }
 
-const fields = [
-    { name: 'creatorName', label: 'Creator Name' },
-    { name: 'gameName', label: 'Game Name' },
-    { name: 'gameDesc', label: 'Game Description' },
-    { name: 'genre', label: 'Genre' },
-    { name: 'releaseDate', label: 'Release Date' },
-    { name: 'contactEmail', label: 'Contact Email' },
-    { name: 'website', label: 'Website or Store Link' },
-    { name: 'terms', label: 'Agreed to Terms' }
-];
+const fields = [{ name: 'creatorName', label: 'Creator Name' },
+{ name: 'gameName', label: 'Game Name' },
+{ name: 'gameDesc', label: 'Game Description' },
+{ name: 'genre', label: 'Genre' },
+{ name: 'releaseDate', label: 'Release Date' },
+{ name: 'contactEmail', label: 'Contact Email' },
+{ name: 'website', label: 'Website or Store Link' },
+{ name: 'terms', label: 'Agreed to Terms' }];
 
-window.addEventListener('DOMContentLoaded', () => {
+export function initSubmitForm() {
     const submittedDataElem = document.getElementById('submittedData');
     const params = new URLSearchParams(window.location.search);
 
@@ -30,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     if (!isNaN(dateObj)) {
                         value = dateObj.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
                     }
-                } catch { /* ignore error, keep raw */ }
+                } catch { /* ignore error */ }
             }
             value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
@@ -47,4 +45,4 @@ window.addEventListener('DOMContentLoaded', () => {
     if (yearElem) {
         yearElem.textContent = new Date().getFullYear();
     }
-});
+}
