@@ -1,0 +1,90 @@
+/* --- Submission confirmation page styling --- */
+
+main {
+    background: var(--spun-pearl);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 15px rgba(95, 67, 178, 0.2);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+main h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--studio);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+main h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--martinique);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+main p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: var(--martinique);
+}
+
+/* Submitted data list styling */
+.submitted-data {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.submitted-data dt {
+    font-weight: 700;
+    color: var(--martinique);
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.submitted-data dd {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+    color: var(--black);
+}
+
+/* Back link button */
+a.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--studio);
+    color: var(--soft-peach);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+a.back-link:hover,
+a.back-link:focus {
+    background: var(--martinique);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .submitted-data {
+        max-width: 100%;
+    }
+
+    a.back-link {
+        width: 100%;
+        text-align: center;
+    }
+}

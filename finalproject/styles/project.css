@@ -40,7 +40,8 @@ header nav {
     margin-bottom: 1rem;
 }
 
-header nav h1 {
+header nav h1,
+main h1 {
     font-family: 'Press Start 2P', cursive;
     color: var(--studio);
     font-size: 1.75rem;
@@ -421,18 +422,13 @@ button[type="submit"]:focus {
         padding: 1rem;
         margin-top: 0.5rem;
         box-shadow: none;
-        /* remove shadow for inline expansion */
         position: static;
-        /* remove absolute positioning */
     }
 
     .nav-menu.show {
         display: flex;
     }
-}
 
-
-@media (max-width: 600px) {
     body {
         padding: 0.5rem;
     }
