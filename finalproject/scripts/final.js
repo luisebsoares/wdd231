@@ -1,7 +1,3 @@
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
-
 window.addEventListener('DOMContentLoaded', () => {
     const lastVisit = localStorage.getItem('lastVisit');
     const now = Date.now();
@@ -15,3 +11,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
     localStorage.setItem('lastVisit', now);
 });
+
+(function initLocalDateTime() {
+    const els = document.querySelectorAll('.js-local-time');
+    if (!els.length) return;
+
+    const fmt = new Intl.DateTimeFormat(undefined, {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+    });
+
+    function tick() {
+        const now = new Date();
+        const text = fmt.format(now);
+        els.forEach(el => {
+            el.textContent = text;
+            el.setAttribute('datetime', now.toISOString());
+            el.title = `Your local date & time`;
+        });
+    }
+
+    tick();
+    setInterval(tick, 1000);
+})();
+
